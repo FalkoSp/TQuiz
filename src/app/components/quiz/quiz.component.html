@@ -1,0 +1,13 @@
+<h3>Vervollständige:</h3>
+<table>
+  <thead>
+    <tr><th>Name</th><th>Symbol</th><th>Einheit</th></tr>
+  </thead>
+  <tbody>
+    <!-- TODO why not <app-problem>, what is the difference? -->
+    <tr app-problem *ngFor="let quantity of quiz" [quantity] = quantity></tr>
+  </tbody>
+  <tfoot>
+    <tr><th>Name</th><th>Symbol</th><th>Einheit</th></tr>
+  </tfoot>
+</table>

@@ -8,5 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+console.log(new Date() + ", using the environment " + JSON.stringify(environment));
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
