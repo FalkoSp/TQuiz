@@ -1,4 +1,4 @@
 <header>
   <h1 title="Benannt nach Herrn Tornow, dem Physiklehrer, der jede Physikstunde mit diesem Quiz begann.">Tornow-Quiz</h1>
-  <app-button text="Neu" (buttonClick)="nextQuiz()"></app-button>
+  <app-button *ngIf="quizVisible()" text="Neu" (buttonClick)="nextQuiz()"></app-button>
 </header>
