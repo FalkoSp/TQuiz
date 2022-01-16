@@ -5,7 +5,7 @@
   </thead>
   <tbody>
     <!-- TODO why not <app-problem>, what is the difference? -->
-    <tr app-problem *ngFor="let quantity of quiz" [quantity] = quantity></tr>
+    <tr app-problem *ngFor="let quantity of quiz" [quantity] = quantity [ngClass]="{ completed: completed }"></tr>
   </tbody>
   <tfoot>
     <tr><th>Name</th><th>Symbol</th><th>Einheit</th></tr>

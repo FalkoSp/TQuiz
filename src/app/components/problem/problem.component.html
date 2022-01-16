@@ -1,1 +1,15 @@
-<td>{{verifiedQuantity.name}}</td><td>{{verifiedQuantity.symbol}}</td><td>{{verifiedQuantity.unit}}</td>
+<td [ngClass]="{ solved: solved }">
+  <span *ngIf="showName">{{verifiedQuantity.name}}</span>
+  <app-answer-editor *ngIf="!showName" kind="name" [goal] = verifiedQuantity.name (accepted)="registerAnswer('name')"></app-answer-editor>
+</td>
+<td>
+  <span *ngIf="showSymbol">{{verifiedQuantity.symbol}}</span>
+  <app-answer-editor *ngIf="!showSymbol"  kind="symbol" [goal] = verifiedQuantity.symbol (accepted)="registerAnswer('symbol')"></app-answer-editor>
+</td>
+<td>
+  <span *ngIf="showUnit">{{verifiedQuantity.unit}}</span><span *ngIf="showUnit&&verifiedQuantity.unitName">, {{verifiedQuantity.unitName}}</span>
+  <app-answer-editor *ngIf="!showUnit"  kind="unity" [goal] = verifiedQuantity.unit (accepted)="registerAnswer('unit')"></app-answer-editor>
+</td>
+<td>
+  <span class="icon" *ngIf="offerHint" (click)="show()" title="Lösung anzeigen">visibility</span>
+</td>

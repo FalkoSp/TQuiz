@@ -6,10 +6,11 @@ Named after my late physics teacher, Herr Tornow.
 
 ## TODO
 
-- make the quiz in the first place, i.e. editable fields
-- activate the next button
-
-Later Plans are to remember and then respond to the learners lever, to add formulae, like N = kg/(m*s^2), ability to specify subfield like electro. 
+Later Plans 
+- ability to specify a subfield like electro.
+- Automate tab jumps
+- remember and then respond to the learners level
+- to add formulae, like N = kg/(m*s^2)
 
 ## Dev Howtos
 

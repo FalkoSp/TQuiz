@@ -10,6 +10,7 @@ import {QuizProviderService} from "../../services/quiz-provider.service";
 export class QuizComponent implements OnInit {
 
   quiz : Quantity[] = []
+  completed : boolean = false
 
   constructor(private quizProvider : QuizProviderService) { }
 

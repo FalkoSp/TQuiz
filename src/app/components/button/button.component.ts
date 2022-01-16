@@ -9,17 +9,19 @@ export class ButtonComponent implements OnInit {
 
   @Input() text? : string
 
-  @Output() buttonClick = new EventEmitter()
+  // this declares an outgoing event
+  @Output() buttonClick : EventEmitter<string> = new EventEmitter()
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // this event comes from the button element in button.component.html
   buttonOnClick(){
-    console.log(`Button ${this.text} clicked.`)
+    console.log(`Button: ${this.text} clicked.`)
     // this event can now be used for the app-button tag
-    this.buttonClick.emit({"name":this.text, "event": event})
+    this.buttonClick.emit(this.text)
   }
 
 }

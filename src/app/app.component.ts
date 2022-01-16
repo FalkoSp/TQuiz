@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tornow Quiz';
+
+  newQuiz(){
+    console.log("trying to restart")
+    // TODO is this the way to do such things?
+    window.location.reload()
+  }
+
 }

@@ -2,8 +2,10 @@
 https://fonts.google.com/specimen/Linden+Hill
 https://crudfactory.com/
 */
-
 @import url("https://fonts.googleapis.com/css2?family=Linden+Hill:wght@300;400&display=block");
+
+/* https://fonts.google.com/icons */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone");
 
 * {
   box-sizing: border-box;
@@ -16,7 +18,7 @@ body {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 700px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
@@ -80,6 +82,22 @@ body {
   height: 20px;
 }
 
+.icon {
+  font-family: 'Material Icons Two Tone';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.solved {
+  border-left: 2px solid green;
+}
+
+.completed {
+  background: green;
+}
+
+
 .smol {
   padding: 12px 0px;
   font-size: 10px;
@@ -99,4 +117,8 @@ th{
 }
 
 tr, td, th {
+}
+
+td {
+  text-align: center;
 }
