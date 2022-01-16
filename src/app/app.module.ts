@@ -9,7 +9,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { ProblemComponent } from './components/problem/problem.component';
-import { TestPanelComponent } from './components/test-panel/test-panel.component';
 import { AnswerEditorComponent } from './components/answer-editor/answer-editor.component';
 import { ConfigComponent } from './components/config/config.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -27,7 +26,6 @@ const routes : Routes = [
     ButtonComponent,
     QuizComponent,
     ProblemComponent,
-    TestPanelComponent,
     AnswerEditorComponent,
     ConfigComponent,
     FooterComponent
