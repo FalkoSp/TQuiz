@@ -1,2 +1,20 @@
 <h3>Konfiguration</h3>
-<a routerLink="/">Zurück zum Quiz</a>
+(Funktioniert noch nicht.)
+<form #configForm="ngForm" (ngSubmit)="onSubmit(configForm)">
+  <ul>
+    <li>
+      Stil der Oberfläche:
+      <select [(ngModel)]="config.style" name="style">
+        <option value="dark">Dark</option>
+        <option value="bright">Bright</option>
+        <option value="rainbow">Rainbow</option>
+      </select>
+    </li>
+    <li>
+      Email:
+      <input [(ngModel)]="config.email" name="email"/>
+    </li>
+  </ul>
+  <button type="submit" [disabled]="!configForm.form.valid">Try</button>
+</form>
+<a routerLink="/" class="icon">arrow_back</a>

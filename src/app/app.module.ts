@@ -1,8 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms"
 import { RouterModule, Routes} from "@angular/router"
+
+// TODO do I need this here, or is there a place to configure testing?
+import { RouterTestingModule } from "@angular/router/testing"
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -34,9 +37,10 @@ const routes : Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes, {enableTracing: false})
+    RouterModule.forRoot(routes, {enableTracing: false}),
+    RouterTestingModule
   ],
-  providers: [],
+  providers: [NgModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
