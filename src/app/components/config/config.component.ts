@@ -6,7 +6,7 @@ import { NgForm } from "@angular/forms"
   templateUrl: './config.component.html',
   styleUrls: ['./config.component.css']
 })
-export class ConfigComponent implements OnInit {
+export class ConfigComponent {
 
   config = {
     style : "dark",
@@ -15,10 +15,7 @@ export class ConfigComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  // I want the email to be either "" or something@stuff.tld
+  // TODO I want the email to be either "" or something@stuff.tld
 
   onSubmit(form : NgForm) {
     console.log("Form submitted: ", form)

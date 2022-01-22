@@ -7,7 +7,7 @@ import { AnswerVerifyerService } from "../../services/answer-verifyer.service"
   templateUrl: './answer-editor.component.html',
   styleUrls: ['./answer-editor.component.css']
 })
-export class AnswerEditorComponent implements OnInit {
+export class AnswerEditorComponent {
 
   @Input() kind : string = ""
   @Input() goal : string = ""
@@ -18,10 +18,7 @@ export class AnswerEditorComponent implements OnInit {
   @Output() accepted : EventEmitter<boolean> = new EventEmitter()
 
   constructor(private verifyer : AnswerVerifyerService) { }
-
-  ngOnInit(): void {
-  }
-
+  
   onAnswerChange(answerValue: string): void {
     let correctAnswer = this.verifyer.verify(this.kind, this.goal, answerValue)
     if(this.correct != correctAnswer){

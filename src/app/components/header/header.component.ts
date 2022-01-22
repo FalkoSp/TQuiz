@@ -7,12 +7,9 @@ import { Router } from "@angular/router"
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   constructor(private uiSignals: UiSignalsService, private router : Router) { }
-
-  ngOnInit(): void {
-  }
 
   nextQuiz(v?:any){
     // TODO how do I get the value??
